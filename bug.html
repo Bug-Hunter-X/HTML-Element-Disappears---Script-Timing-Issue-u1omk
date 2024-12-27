@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will disappear!
+  </div>
+  <script>
+    document.getElementById("myDiv").style.display = "none";
+    //The bug is that the script is running before the element is fully loaded.
+    //The solution is to either move the script to the end of the body or use DOMContentLoaded
+  </script>
+</body>
+</html>
