@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be visible!
+  </div>
+  <script>
+    //Solution 1: Move script to the end of the body
+    // document.getElementById("myDiv").style.display = "none"; 
+
+    // Solution 2: Use DOMContentLoaded event listener
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById("myDiv").style.display = "none";
+    });
+  </script>
+</body>
+</html>
